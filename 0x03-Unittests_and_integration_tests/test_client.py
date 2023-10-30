@@ -1,22 +1,22 @@
 #!/usr/bin/env python3
-""" Parameterize and patch as decorators, Mocking a property, More patching, Parameterize,  Integration test: fixtures"""
-
+"""A module for testing the client module.
+"""
 import unittest
 from typing import Dict
-from unittest.mock import(
+from unittest.mock import (
     MagicMock,
     Mock,
     PropertyMock,
     patch,
 )
-
 from parameterized import parameterized, parameterized_class
 from requests import HTTPError
 
 from client import (
-    githubOrgclient
+    GithubOrgClient
 )
 from fixtures import TEST_PAYLOAD
+
 
 class TestGithubOrgClient(unittest.TestCase):
     """Tests the `GithubOrgClient` class."""
